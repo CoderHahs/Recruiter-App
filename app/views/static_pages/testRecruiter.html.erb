@@ -1,0 +1,8 @@
+<h1>Test Recruiters</h1>
+
+<p>Here are all the recruiters: 
+	<% @num_recruiter.each do |element| %>
+  	<%= "#{element.first_name}, #{element.last_name}, #{element.current_position}, #{element.email}" %>
+	<% end %>
+	
+</p>

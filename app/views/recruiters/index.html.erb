@@ -1,0 +1,20 @@
+<h1>Recruiters</h1>
+
+<p> <% @recruiters.each do |recruiter| %>
+	<div>
+		<h2> <%= recruiter.full_name() %> </h2>
+		<h3> <%= recruiter.current_position%> </h3>
+		<h3> <%= recruiter.email %> </h3>
+		<div>
+			<!--<a href="/recruiters/<%= recruiter.id %>">Show</a>
+			<a href="/recruiters/<%= recruiter.id %>/edit">Edit</a>
+			<a href="/recruiters/<%= recruiter.id %>">Destroy</a>-->
+			<%= link_to 'Show', "/recruiters/#{recruiter.id}" %>
+			<%= link_to 'Edit', "/recruiters/#{recruiter.id}/edit" %>
+			<%= link_to 'Delete', "/recruiters/#{recruiter.id}", { data: { method: :delete, confirm: "Are you sure?"}} %>
+		</div>
+		<% end %>
+	</div>
+</p>
+<!--<a href="/recruiters/new"><p>Add new Recruiter</p></a>-->
+<%= link_to 'Add new Recruiter', '/recruiters/new' %>

@@ -1,0 +1,28 @@
+<div>
+	<%= form_with model: @recruiter, local: true do |form| %>
+		
+		<div class="field">
+			<%= form.label :first_name %><br />
+			<%= form.text_field :first_name %>
+		</div>
+		
+		<div class="field">
+			<%= form.label :last_name %><br />
+			<%= form.text_field :last_name%>
+	    </div>
+
+	    <div class="field">
+			<%= form.label :email %><br />
+			<%= form.email_field :email%>
+	    </div>
+
+	    <div class="field">
+			<%= form.label :current_position %><br />
+			<%= form.text_field :current_position%>
+	    </div>
+		
+		<div class="field">
+			<%= form.submit %>
+		</div>
+	<% end %>
+</div>
